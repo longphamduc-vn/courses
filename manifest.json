@@ -1,0 +1,16 @@
+{
+  "name": "Dashboard Ôn Tập Trắc Nghiệm",
+  "short_name": "Trắc Nghiệm",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3407/3407024.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

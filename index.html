@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Ôn Tập Trắc Nghiệm Đa Môn</title>
+    <!-- Liên kết file Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Cấu hình màu thanh trạng thái cho iOS / Android -->
+    <meta name="theme-color" content="#4f46e5">
+    <style>
+        :root {
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --primary: #4f46e5;
+            --primary-light: #e0e7ff;
+            --border-color: #e2e8f0;
+            --success: #16a34a;
+            --success-light: #dcfce7;
+            --danger: #dc2626;
+            --danger-light: #fee2e2;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+        body { background-color: var(--bg-body); color: var(--text-main); line-height: 1.5; display: flex; flex-direction: column; min-height: 100vh; }
+
+        header { background: var(--bg-card); border-bottom: 1px solid var(--border-color); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+        header h1 { font-size: 1.25rem; font-weight: 700; color: var(--primary); }
+
+        .dashboard-container { display: grid; grid-template-columns: 320px 1fr; gap: 1.5rem; padding: 1.5rem 2rem; max-width: 1600px; margin: 0 auto; width: 100%; flex: 1; }
+        @media (max-width: 992px) { .dashboard-container { grid-template-columns: 1fr; } }
+
+        .sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+        .panel-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.25rem; box-shadow: var(--shadow-sm); }
+        .panel-card h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 0.75rem; }
+
+        .courses-checkbox-list { display: flex; flex-direction: column; gap: 0.5rem; max-height: 180px; overflow-y: auto; padding-right: 0.25rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 0.5rem; background: #fafafa; }
+        .course-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; cursor: pointer; user-select: none; }
+        .course-item input { accent-color: var(--primary); width: 16px; height: 16px; cursor: pointer; }
+
+        .form-group { margin-bottom: 0.85rem; }
+        .form-group:last-child { margin-bottom: 0; }
+        .form-group label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem; }
+        .form-control { width: 100%; padding: 0.55rem 0.75rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); font-size: 0.875rem; outline: none; background: #fff; }
+        .form-control:focus { border-color: var(--primary); }
+
+        .toggle-wrapper { display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0; }
+        .switch { position: relative; display: inline-block; width: 44px; height: 24px; }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider { position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .3s; border-radius: 24px; }
+        .slider:before { position: absolute; content: ""; height: 18px; width: 18px; left: 3px; bottom: 3px; background-color: white; transition: .3s; border-radius: 50%; }
+        input:checked + .slider { background-color: var(--primary); }
+        input:checked + .slider:before { transform: translateX(20px); }
+
+        .content-area { display: flex; flex-direction: column; gap: 1.25rem; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+        .stat-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1rem 1.25rem; box-shadow: var(--shadow-sm); }
+        .stat-card .val { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+        .stat-card .lbl { font-size: 0.8rem; color: var(--text-muted); }
+
+        .group-header { font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin: 1.5rem 0 0.75rem 0; padding-bottom: 0.35rem; border-bottom: 2px solid var(--primary-light); display: flex; justify-content: space-between; align-items: center; }
+        .group-header .badge-count { font-size: 0.8rem; background: var(--primary-light); color: var(--primary); padding: 0.2rem 0.6rem; border-radius: 12px; font-weight: 600; }
+
+        .question-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1.25rem; margin-bottom: 1rem; box-shadow: var(--shadow-sm); }
+        .question-header { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.75rem; }
+        .question-title { font-weight: 600; font-size: 1rem; flex: 1; }
+
+        .tags-container { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+        .tag { font-size: 0.725rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 4px; background: #f1f5f9; color: var(--text-muted); border: 1px solid #e2e8f0; }
+        .tag.course { background: #fae8ff; color: #86198f; border-color: #f5d0fe; }
+        .tag.cate { background: #f3e8ff; color: #7e22ce; border-color: #e9d5ff; }
+        .tag.topic { background: #e0f2fe; color: #0369a1; border-color: #bae6fd; }
+        .tag.level { background: #fef3c7; color: #d97706; border-color: #fde68a; }
+
+        .options-list { display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.75rem; }
+        .option-item { padding: 0.6rem 0.8rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); cursor: pointer; font-size: 0.9rem; transition: all 0.2s; display: flex; justify-content: space-between; align-items: center; background: #fff; }
+        .option-item:hover { border-color: var(--primary); background-color: #f8fafc; }
+        .option-item.correct-revealed { background-color: var(--success-light) !important; border-color: var(--success) !important; color: #14532d; font-weight: 600; }
+        .option-item.selected-wrong { background-color: var(--danger-light) !important; border-color: var(--danger) !important; color: #7f1d1d; }
+
+        .feedback-badge { font-size: 0.75rem; font-weight: 700; padding: 0.1rem 0.4rem; border-radius: 4px; }
+        .feedback-badge.correct { background: var(--success); color: white; }
+        .feedback-badge.wrong { background: var(--danger); color: white; }
+
+        .card-actions { margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color); display: flex; justify-content: flex-end; }
+        .btn-reveal { background: transparent; border: 1px solid var(--border-color); padding: 0.35rem 0.75rem; border-radius: var(--radius-md); font-size: 0.8rem; font-weight: 600; color: var(--text-muted); cursor: pointer; }
+        .btn-reveal:hover { color: var(--primary); border-color: var(--primary); background: var(--primary-light); }
+
+        .empty-state { text-align: center; padding: 3rem 1rem; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px dashed var(--border-color); color: var(--text-muted); }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>⚡ Dashboard Ôn Tập Trắc Nghiệm Đa Môn</h1>
+        <div id="status-summary" style="font-size: 0.85rem; color: var(--text-muted);">Đang nạp dữ liệu...</div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <!-- 1. CHỌN MÔN HỌC -->
+            <div class="panel-card">
+                <h3>1. Chọn Môn Học</h3>
+                <div style="margin-bottom: 0.5rem; display: flex; justify-content: space-between; font-size: 0.75rem;">
+                    <a href="#" onclick="selectAllCourses(true); return false;" style="color: var(--primary);">Chọn tất cả</a>
+                    <a href="#" onclick="selectAllCourses(false); return false;" style="color: var(--text-muted);">Bỏ chọn tất cả</a>
+                </div>
+                <div id="courses-list" class="courses-checkbox-list"></div>
+            </div>
+
+            <!-- 2. TÌM KIẾM & LỌC -->
+            <div class="panel-card">
+                <h3>2. Tìm kiếm & Lọc</h3>
+                <div class="form-group">
+                    <label for="search-input">Từ khóa tìm kiếm</label>
+                    <input type="text" id="search-input" class="form-control" placeholder="Nhập từ khóa câu hỏi..." oninput="applyFilters()">
+                </div>
+                <div class="form-group">
+                    <label for="filter-level">Lọc Mức độ (Level)</label>
+                    <select id="filter-level" class="form-control" onchange="applyFilters()">
+                        <option value="">-- Tất cả Mức độ --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="filter-topic">Lọc Chủ đề (Topic)</label>
+                    <select id="filter-topic" class="form-control" onchange="applyFilters()">
+                        <option value="">-- Tất cả Chủ đề --</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- 3. CẤU HÌNH HIỂN THỊ -->
+            <div class="panel-card">
+                <h3>3. Sắp xếp & Gom Nhóm</h3>
+                <div class="form-group">
+                    <label for="sort-by">Sắp xếp theo</label>
+                    <select id="sort-by" class="form-control" onchange="applyFilters()">
+                        <option value="course-asc">Môn học (A -> Z)</option>
+                        <option value="cate-asc">Category (A -> Z)</option>
+                        <option value="topic-asc">Topic (A -> Z)</option>
+                        <option value="level-asc">Level (A -> Z)</option>
+                        <option value="id-asc">Thứ tự mặc định</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="group-by">Gom nhóm hiển thị</label>
+                    <select id="group-by" class="form-control" onchange="applyFilters()">
+                        <option value="courseName">Môn Học (Course)</option>
+                        <option value="category">Thể Loại (Category)</option>
+                        <option value="topic">Chủ Đề (Topic)</option>
+                        <option value="level">Mức Độ (Level)</option>
+                        <option value="none">Không gom nhóm</option>
+                    </select>
+                </div>
+                <div class="toggle-wrapper">
+                    <span style="font-size: 0.85rem; font-weight: 600;">Hiện tất cả đáp án</span>
+                    <label class="switch">
+                        <input type="checkbox" id="toggle-answers" onchange="renderQuestions()">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="content-area">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="val" id="stat-courses">0</div>
+                    <div class="lbl">Môn học đã chọn</div>
+                </div>
+                <div class="stat-card">
+                    <div class="val" id="stat-total">0</div>
+                    <div class="lbl">Tổng số câu hỏi nạp được</div>
+                </div>
+                <div class="stat-card">
+                    <div class="val" id="stat-filtered">0</div>
+                    <div class="lbl">Câu hỏi hiển thị</div>
+                </div>
+            </div>
+
+            <div id="questions-container">
+                <div class="empty-state">
+                    <h3>Đang nạp dữ liệu câu hỏi...</h3>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        /* ==========================================================================
+           1. KHAI BÁO DANH SÁCH THƯ MỤC MÔN HỌC (Không cần dùng file courses.json)
+           ========================================================================== */
+        const DEFAULT_COURSE_FOLDERS = [
+            { id: '25434', name: 'Thiết kế Web', folder: '25434' },
+            // Khi muốn thêm môn mới, bạn chỉ cần chèn 1 dòng vào đây:
+            // { id: 'chemistry', name: 'Môn Hóa Học', folder: 'chemistry' }
+        ];
+
+        /* ==========================================================================
+           STATE MANAGEMENT
+           ========================================================================== */
+        let selectedCourseIds = new Set(); 
+        let allMergedQuestions = [];    
+        let filteredQuestions = [];     
+        let userAnswers = {};
+
+        window.addEventListener('DOMContentLoaded', () => {
+            renderCourseCheckboxes();
+            selectAllCourses(true); // Mặc định tự động chọn tất cả môn khi mở trang
+        });
+
+        function renderCourseCheckboxes() {
+            const container = document.getElementById('courses-list');
+            container.innerHTML = DEFAULT_COURSE_FOLDERS.map(c => `
+                <label class="course-item">
+                    <input type="checkbox" value="${c.id}" onchange="toggleCourseSelection('${c.id}')" id="chk-course-${c.id}">
+                    <span>${escapeHTML(c.name)}</span>
+                </label>
+            `).join('');
+        }
+
+        function selectAllCourses(select) {
+            DEFAULT_COURSE_FOLDERS.forEach(c => {
+                const chk = document.getElementById(`chk-course-${c.id}`);
+                if (chk) chk.checked = select;
+                if (select) selectedCourseIds.add(c.id);
+                else selectedCourseIds.delete(c.id);
+            });
+            loadSelectedCoursesData();
+        }
+
+        function toggleCourseSelection(courseId) {
+            if (selectedCourseIds.has(courseId)) {
+                selectedCourseIds.delete(courseId);
+            } else {
+                selectedCourseIds.add(courseId);
+            }
+            loadSelectedCoursesData();
+        }
+
+        /* ==========================================================================
+           2. TỰ ĐỘNG ĐỌC DỮ LIỆU TỪ CÁC THƯ MỤC MÔN HỌC
+           ========================================================================== */
+        async function loadSelectedCoursesData() {
+            allMergedQuestions = [];
+            document.getElementById('stat-courses').innerText = selectedCourseIds.size;
+            document.getElementById('status-summary').innerText = `Đang nạp dữ liệu cho ${selectedCourseIds.size} môn...`;
+
+            const activeCourses = DEFAULT_COURSE_FOLDERS.filter(c => selectedCourseIds.has(c.id));
+
+            for (const course of activeCourses) {
+                try {
+                    const pathFolder = `data/courses/${course.folder}`;
+                    const [resQ, resC] = await Promise.all([
+                        fetch(`${pathFolder}/questions.json`),
+                        fetch(`${pathFolder}/cate.json`)
+                    ]);
+
+                    let rawQ = resQ.ok ? parseRobustJSON(await resQ.text()) : [];
+                    let rawC = resC.ok ? parseRobustJSON(await resC.text()) : [];
+
+                    const cateMap = {};
+                    rawC.forEach(item => { if (item && item.id !== undefined) cateMap[item.id] = item; });
+
+                    const processed = rawQ.map((q, idx) => {
+                        const targetId = idx + 1;
+                        const categoryInfo = cateMap[targetId] || null;
+
+                        let questionText = "Không có nội dung câu hỏi";
+                        if (q.content && q.content[0]) questionText = q.content[0].value || questionText;
+
+                        let options = (q.options || []).map(opt => ({
+                            text: (opt.blocks && opt.blocks[0]) ? opt.blocks[0].value || "" : "",
+                            isCorrect: !!opt.isCorrect
+                        }));
+
+                        return {
+                            uid: `${course.id}_${idx}`, 
+                            courseId: course.id,
+                            courseName: course.name,
+                            id: targetId,
+                            text: questionText,
+                            options: options,
+                            level: categoryInfo ? categoryInfo.level : "Chưa phân loại",
+                            category: categoryInfo ? categoryInfo.category : "Chưa phân loại",
+                            topic: categoryInfo ? categoryInfo.topic : "Chưa phân loại"
+                        };
+                    });
+
+                    allMergedQuestions.push(...processed);
+                } catch (e) {
+                    console.error(`Không tìm thấy hoặc lỗi thư mục ${course.folder}:`, e);
+                }
+            }
+
+            document.getElementById('stat-total').innerText = allMergedQuestions.length;
+            document.getElementById('status-summary').innerText = `Đã tải tổng cộng ${allMergedQuestions.length} câu hỏi.`;
+
+            updateDropdownOptions();
+            applyFilters();
+        }
+
+        /* ==========================================================================
+           3. FILTERING & RENDERING
+           ========================================================================== */
+        function updateDropdownOptions() {
+            const levelSelect = document.getElementById('filter-level');
+            const topicSelect = document.getElementById('filter-topic');
+
+            const levels = [...new Set(allMergedQuestions.map(q => q.level))].filter(Boolean);
+            const topics = [...new Set(allMergedQuestions.map(q => q.topic))].filter(Boolean);
+
+            levelSelect.innerHTML = '<option value="">-- Tất cả Mức độ --</option>' + 
+                levels.map(l => `<option value="${l}">${l}</option>`).join('');
+
+            topicSelect.innerHTML = '<option value="">-- Tất cả Chủ đề --</option>' + 
+                topics.map(t => `<option value="${t}">${t}</option>`).join('');
+        }
+
+        function applyFilters() {
+            const keyword = document.getElementById('search-input').value.toLowerCase().trim();
+            const selectedLevel = document.getElementById('filter-level').value;
+            const selectedTopic = document.getElementById('filter-topic').value;
+            const sortBy = document.getElementById('sort-by').value;
+
+            filteredQuestions = allMergedQuestions.filter(q => {
+                const matchKeyword = q.text.toLowerCase().includes(keyword);
+                const matchLevel = selectedLevel === "" || q.level === selectedLevel;
+                const matchTopic = selectedTopic === "" || q.topic === selectedTopic;
+                return matchKeyword && matchLevel && matchTopic;
+            });
+
+            filteredQuestions.sort((a, b) => {
+                if (sortBy === 'course-asc') return a.courseName.localeCompare(b.courseName, 'vi');
+                if (sortBy === 'cate-asc') return a.category.localeCompare(b.category, 'vi');
+                if (sortBy === 'topic-asc') return a.topic.localeCompare(b.topic, 'vi');
+                if (sortBy === 'level-asc') return a.level.localeCompare(b.level, 'vi');
+                return a.id - b.id;
+            });
+
+            document.getElementById('stat-filtered').innerText = filteredQuestions.length;
+            renderQuestions();
+        }
+
+        function renderQuestions() {
+            const container = document.getElementById('questions-container');
+            const showAllAnswers = document.getElementById('toggle-answers').checked;
+            const groupBy = document.getElementById('group-by').value;
+
+            if (filteredQuestions.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <h3>Không tìm thấy câu hỏi phù hợp</h3>
+                        <p style="margin-top: 0.5rem;">Hãy tích chọn thêm môn học hoặc điều chỉnh lại bộ lọc.</p>
+                    </div>`;
+                return;
+            }
+
+            container.innerHTML = "";
+
+            if (groupBy === 'none') {
+                filteredQuestions.forEach(q => container.appendChild(createQuestionCard(q, showAllAnswers)));
+            } else {
+                const groups = {};
+                filteredQuestions.forEach(q => {
+                    const key = q[groupBy] || "Chưa phân loại";
+                    if (!groups[key]) groups[key] = [];
+                    groups[key].push(q);
+                });
+
+                for (const [groupName, qList] of Object.entries(groups)) {
+                    const groupHeader = document.createElement('div');
+                    groupHeader.className = 'group-header';
+                    groupHeader.innerHTML = `
+                        <span>📁 ${escapeHTML(groupName)}</span>
+                        <span class="badge-count">${qList.length} câu</span>
+                    `;
+                    container.appendChild(groupHeader);
+                    qList.forEach(q => container.appendChild(createQuestionCard(q, showAllAnswers)));
+                }
+            }
+        }
+
+        function createQuestionCard(q, showAllAnswers) {
+            const card = document.createElement('div');
+            card.className = 'question-card';
+
+            const selectedOptIndex = userAnswers[q.uid];
+
+            const optionsHTML = q.options.map((opt, optIdx) => {
+                let stateClass = "";
+                let feedbackTag = "";
+
+                if (showAllAnswers) {
+                    if (opt.isCorrect) {
+                        stateClass = "correct-revealed";
+                        feedbackTag = `<span class="feedback-badge correct">Đáp án đúng</span>`;
+                    }
+                } else {
+                    if (selectedOptIndex !== undefined) {
+                        if (optIdx === selectedOptIndex) {
+                            if (opt.isCorrect) {
+                                stateClass = "correct-revealed";
+                                feedbackTag = `<span class="feedback-badge correct">Chính xác</span>`;
+                            } else {
+                                stateClass = "selected-wrong";
+                                feedbackTag = `<span class="feedback-badge wrong">Sai</span>`;
+                            }
+                        } else if (opt.isCorrect && q.isRevealed) {
+                            stateClass = "correct-revealed";
+                        }
+                    } else if (q.isRevealed && opt.isCorrect) {
+                        stateClass = "correct-revealed";
+                        feedbackTag = `<span class="feedback-badge correct">Đáp án đúng</span>`;
+                    }
+                }
+
+                return `
+                    <div class="option-item ${stateClass}" onclick="handleOptionClick('${q.uid}', ${optIdx})">
+                        <span><b>${String.fromCharCode(65 + optIdx)}.</b> ${escapeHTML(opt.text)}</span>
+                        ${feedbackTag}
+                    </div>
+                `;
+            }).join('');
+
+            card.innerHTML = `
+                <div class="question-header">
+                    <div class="question-title">
+                        <span style="color: var(--primary);">Câu ${q.id}:</span> ${escapeHTML(q.text)}
+                    </div>
+                </div>
+                <div class="tags-container">
+                    <span class="tag course">Môn: ${escapeHTML(q.courseName)}</span>
+                    <span class="tag cate">Category: ${escapeHTML(q.category)}</span>
+                    <span class="tag topic">Topic: ${escapeHTML(q.topic)}</span>
+                    <span class="tag level">Level: ${escapeHTML(q.level)}</span>
+                </div>
+                <div class="options-list">
+                    ${optionsHTML}
+                </div>
+                ${!showAllAnswers ? `
+                    <div class="card-actions">
+                        <button class="btn-reveal" onclick="toggleRevealCorrect('${q.uid}')">
+                            💡 ${q.isRevealed ? 'Ẩn đáp án đúng' : 'Hiện đáp án đúng'}
+                        </button>
+                    </div>
+                ` : ''}
+            `;
+
+            return card;
+        }
+
+        /* ==========================================================================
+           4. UTILS & INTERACTION
+           ========================================================================== */
+        function handleOptionClick(uid, optionIndex) {
+            if (document.getElementById('toggle-answers').checked) return;
+            userAnswers[uid] = optionIndex;
+            renderQuestions();
+        }
+
+        function toggleRevealCorrect(uid) {
+            const target = allMergedQuestions.find(q => q.uid === uid);
+            if (target) {
+                target.isRevealed = !target.isRevealed;
+                renderQuestions();
+            }
+        }
+
+        function parseRobustJSON(jsonString) {
+            let cleaned = jsonString.trim();
+            try { return JSON.parse(cleaned); } catch (e) {}
+            try {
+                cleaned = cleaned.replace(/,\s*$/, "");
+                let openBrackets = (cleaned.match(/\[/g) || []).length;
+                let closeBrackets = (cleaned.match(/\]/g) || []).length;
+                let openBraces = (cleaned.match(/\{/g) || []).length;
+                let closeBraces = (cleaned.match(/\}/g) || []).length;
+                while (closeBraces < openBraces) { cleaned += "}"; closeBraces++; }
+                while (closeBrackets < openBrackets) { cleaned += "]"; closeBrackets++; }
+                return JSON.parse(cleaned);
+            } catch (err) { return []; }
+        }
+
+        function escapeHTML(str) {
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;");
+        }
+    </script>
+</body>
+</html>
