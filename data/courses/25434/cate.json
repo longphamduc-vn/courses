@@ -1,0 +1,782 @@
+[
+  {
+    "id": 1,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Mạng máy tính và Giao thức"
+  },
+  {
+    "id": 2,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "Trình duyệt web"
+  },
+  {
+    "id": 3,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "Kiến thức Trang web"
+  },
+  {
+    "id": 4,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "Mô hình Client-Server"
+  },
+  {
+    "id": 5,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Mạng máy tính và Giao thức"
+  },
+  {
+    "id": 6,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Khái niệm Website"
+  },
+  {
+    "id": 7,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Mạng máy tính và Giao thức"
+  },
+  {
+    "id": 8,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "Phân loại Website"
+  },
+  {
+    "id": 9,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Phân loại Website"
+  },
+  {
+    "id": 10,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Khái niệm World Wide Web"
+  },
+  {
+    "id": 11,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Thương mại điện tử"
+  },
+  {
+    "id": 12,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "Thương mại điện tử"
+  },
+  {
+    "id": 13,
+    "level": "Nhận biết",
+    "category": "Quy trình",
+    "topic": "Thiết kế Website"
+  },
+  {
+    "id": 14,
+    "level": "Thông hiểu",
+    "category": "Quy trình",
+    "topic": "Thiết kế Website"
+  },
+  {
+    "id": 15,
+    "level": "Nhận biết",
+    "category": "Bố cục",
+    "topic": "Thiết kế Giao diện Web"
+  },
+  {
+    "id": 16,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Thiết kế Giao diện Web"
+  },
+  {
+    "id": 17,
+    "level": "Phân tích",
+    "category": "Phân tích",
+    "topic": "Cấu trúc Website"
+  },
+  {
+    "id": 18,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "Thiết kế Website"
+  },
+  {
+    "id": 19,
+    "level": "Nhận biết",
+    "category": "Định lượng",
+    "topic": "Thiết kế Website"
+  },
+  {
+    "id": 20,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Thành phần Trang web"
+  },
+  {
+    "id": 21,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Màu sắc trong Thiết kế"
+  },
+  {
+    "id": 22,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Màu sắc trong Thiết kế"
+  },
+  {
+    "id": 23,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Phối màu"
+  },
+  {
+    "id": 24,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Hệ màu HSB"
+  },
+  {
+    "id": 25,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Phối màu"
+  },
+  {
+    "id": 26,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "Màu sắc trong Thiết kế"
+  },
+  {
+    "id": 27,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Hệ màu trong Thiết kế"
+  },
+  {
+    "id": 28,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Hệ màu trong Thiết kế"
+  },
+  {
+    "id": 29,
+    "level": "Nhận biết",
+    "category": "Phân loại",
+    "topic": "Màu sắc trong Thiết kế"
+  },
+  {
+    "id": 30,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Blend Mode"
+  },
+  {
+    "id": 31,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Đồ họa Kỹ thuật số"
+  },
+  {
+    "id": 32,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "Photoshop"
+  },
+  {
+    "id": 33,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Shape Tool"
+  },
+  {
+    "id": 34,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Type Tool"
+  },
+  {
+    "id": 35,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "Đồ họa Vector"
+  },
+  {
+    "id": 36,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Phím tắt"
+  },
+  {
+    "id": 37,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Type Tool"
+  },
+  {
+    "id": 38,
+    "level": "Thông hiểu",
+    "category": "Bố cục",
+    "topic": "Thiết kế Giao diện Web"
+  },
+  {
+    "id": 39,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thẻ Căn bản"
+  },
+  {
+    "id": 40,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Công cụ Chọn"
+  },
+  {
+    "id": 41,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thuộc tính"
+  },
+  {
+    "id": 42,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Phối màu"
+  },
+  {
+    "id": 43,
+    "level": "Nhận biết",
+    "category": "Bố cục",
+    "topic": "Thiết kế Giao diện Web"
+  },
+  {
+    "id": 44,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Hệ màu HSB"
+  },
+  {
+    "id": 45,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Xuất file"
+  },
+  {
+    "id": 46,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "Phối màu"
+  },
+  {
+    "id": 47,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thuộc tính"
+  },
+  {
+    "id": 48,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Layer"
+  },
+  {
+    "id": 49,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Slice Tool"
+  },
+  {
+    "id": 50,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thẻ Bảng"
+  },
+  {
+    "id": 51,
+    "level": "Vận dụng",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Công cụ Chọn"
+  },
+  {
+    "id": 52,
+    "level": "Vận dụng",
+    "category": "Ứng dụng",
+    "topic": "Màu sắc trong Thiết kế"
+  },
+  {
+    "id": 53,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Mạng máy tính và Giao thức"
+  },
+  {
+    "id": 54,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Khái niệm URL"
+  },
+  {
+    "id": 55,
+    "level": "Vận dụng",
+    "category": "Tình huống",
+    "topic": "Thiết kế Hướng người dùng (UCD)"
+  },
+  {
+    "id": 56,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Hệ màu trong Thiết kế"
+  },
+  {
+    "id": 57,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Pha trộn màu sắc"
+  },
+  {
+    "id": 58,
+    "level": "Vận dụng",
+    "category": "Ứng dụng",
+    "topic": "Màu sắc trong Thiết kế"
+  },
+  {
+    "id": 59,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "Màu sắc trong Thiết kế"
+  },
+  {
+    "id": 60,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Pha trộn màu sắc"
+  },
+  {
+    "id": 61,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Công cụ Chọn"
+  },
+  {
+    "id": 62,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Type Tool"
+  },
+  {
+    "id": 63,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Bộ lọc (Filter)"
+  },
+  {
+    "id": 64,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Quy trình UX/UI"
+  },
+  {
+    "id": 65,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Quy trình UX/UI"
+  },
+  {
+    "id": 66,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Phím tắt"
+  },
+  {
+    "id": 67,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Layer"
+  },
+  {
+    "id": 68,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Photoshop - Layer"
+  },
+  {
+    "id": 69,
+    "level": "Vận dụng",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Blend Mode"
+  },
+  {
+    "id": 70,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thuộc tính"
+  },
+  {
+    "id": 71,
+    "level": "Thông hiểu",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Xuất file"
+  },
+  {
+    "id": 72,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thuộc tính"
+  },
+  {
+    "id": 73,
+    "level": "Vận dụng",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Blend Mode"
+  },
+  {
+    "id": 74,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Công cụ Tô màu"
+  },
+  {
+    "id": 75,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Slice Tool"
+  },
+  {
+    "id": 76,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thẻ Meta"
+  },
+  {
+    "id": 77,
+    "level": "Nhận biết",
+    "category": "Bố cục",
+    "topic": "Thiết kế Giao diện Web"
+  },
+  {
+    "id": 78,
+    "level": "Nhận biết",
+    "category": "Định lượng",
+    "topic": "Nguyên lý Thiết kế"
+  },
+  {
+    "id": 79,
+    "level": "Nhận biết",
+    "category": "Định lượng",
+    "topic": "Màu sắc trong Thiết kế"
+  },
+  {
+    "id": 80,
+    "level": "Nhận biết",
+    "category": "Phân loại",
+    "topic": "Màu sắc trong Thiết kế"
+  },
+  {
+    "id": 81,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Phối màu"
+  },
+  {
+    "id": 82,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Hệ màu trong Thiết kế"
+  },
+  {
+    "id": 83,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thuộc tính"
+  },
+  {
+    "id": 84,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Khái niệm DNS"
+  },
+  {
+    "id": 85,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Công cụ Chọn"
+  },
+  {
+    "id": 86,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thuộc tính"
+  },
+  {
+    "id": 87,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Form"
+  },
+  {
+    "id": 88,
+    "level": "Nhận biết",
+    "category": "Định lượng",
+    "topic": "Mạng máy tính và Giao thức"
+  },
+  {
+    "id": 89,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thẻ Định dạng"
+  },
+  {
+    "id": 90,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "HTML - Siêu liên kết"
+  },
+  {
+    "id": 91,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Lịch sử Mạng máy tính"
+  },
+  {
+    "id": 92,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Slice Tool"
+  },
+  {
+    "id": 93,
+    "level": "Thông hiểu",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Slice Tool"
+  },
+  {
+    "id": 94,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Slice Tool"
+  },
+  {
+    "id": 95,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Slice Tool"
+  },
+  {
+    "id": 96,
+    "level": "Vận dụng",
+    "category": "Tình huống",
+    "topic": "Photoshop - Công cụ Chọn"
+  },
+  {
+    "id": 97,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "Ngôn ngữ HTML"
+  },
+  {
+    "id": 98,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thẻ Định dạng"
+  },
+  {
+    "id": 99,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Slice Tool"
+  },
+  {
+    "id": 100,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Slice Tool"
+  },
+  {
+    "id": 101,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Thuộc tính"
+  },
+  {
+    "id": 102,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Photoshop - Hệ màu"
+  },
+  {
+    "id": 103,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Slice Tool"
+  },
+  {
+    "id": 104,
+    "level": "Vận dụng toán học",
+    "category": "Định lượng",
+    "topic": "Nguyên lý Thiết kế"
+  },
+  {
+    "id": 105,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Công cụ Chọn"
+  },
+  {
+    "id": 106,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thuộc tính"
+  },
+  {
+    "id": 107,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Phím tắt"
+  },
+  {
+    "id": 108,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Phối màu"
+  },
+  {
+    "id": 109,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Hệ màu CMYK"
+  },
+  {
+    "id": 110,
+    "level": "Nhận biết",
+    "category": "Phân loại",
+    "topic": "Màu sắc trong Thiết kế"
+  },
+  {
+    "id": 111,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Slice Tool"
+  },
+  {
+    "id": 112,
+    "level": "Nhận biết",
+    "category": "Định lượng",
+    "topic": "HTML - Thẻ Heading"
+  },
+  {
+    "id": 113,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Khái niệm XHTML"
+  },
+  {
+    "id": 114,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Slice Tool"
+  },
+  {
+    "id": 115,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Form"
+  },
+  {
+    "id": 116,
+    "level": "Thông hiểu",
+    "category": "Lý thuyết",
+    "topic": "Photoshop - Layer"
+  },
+  {
+    "id": 117,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thẻ Định dạng"
+  },
+  {
+    "id": 118,
+    "level": "Vận dụng toán học",
+    "category": "Định lượng",
+    "topic": "Nguyên lý Thiết kế"
+  },
+  {
+    "id": 119,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Thẻ Định dạng"
+  },
+  {
+    "id": 120,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Khái niệm HTML"
+  },
+  {
+    "id": 121,
+    "level": "Nhận biết",
+    "category": "Định nghĩa",
+    "topic": "Đồ họa Kỹ thuật số"
+  },
+  {
+    "id": 122,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "Photoshop - Hệ màu"
+  },
+  {
+    "id": 123,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Xuất file"
+  },
+  {
+    "id": 124,
+    "level": "Nhận biết",
+    "category": "Lý thuyết",
+    "topic": "HTML - Form"
+  },
+  {
+    "id": 125,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Phím tắt"
+  },
+  {
+    "id": 126,
+    "level": "Nhận biết",
+    "category": "Định dạng",
+    "topic": "Photoshop - Định dạng File"
+  },
+  {
+    "id": 127,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Phím tắt"
+  },
+  {
+    "id": 128,
+    "level": "Thông hiểu",
+    "category": "Định dạng",
+    "topic": "Định dạng Hình ảnh Web"
+  },
+  {
+    "id": 129,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Slice Tool"
+  },
+  {
+    "id": 130,
+    "level": "Nhận biết",
+    "category": "Ứng dụng",
+    "topic": "Photoshop - Bộ lọc (Filter)"
+  }
+]
