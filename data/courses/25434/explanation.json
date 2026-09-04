@@ -1,0 +1,522 @@
+[
+  {
+    "_id": "e02b70de8cc73f75c3003bfc4f14768c10fe584a572c3ae4a37c7e4cb7dc72d6",
+    "explanation": "FTP (File Transfer Protocol) là giao thức truyền tải tệp tin giữa các máy tính, không dùng để truyền tải thư điện tử[cite: 3]. SMTP (Simple Mail Transfer Protocol), POP3 (Post Office Protocol version 3) và IMAP (Internet Message Access Protocol) đều là các giao thức chuẩn được sử dụng cho dịch vụ thư điện tử (email)[cite: 3]."
+  },
+  {
+    "_id": "1a9eafa33346c4ad7df66dfe236d5ec452a08879879a1ebb88d15b4f8ef85bab",
+    "explanation": "Truy cập trực tiếp cơ sở dữ liệu trên máy chủ là nhiệm vụ của backend/máy chủ web (Web Server)[cite: 3]. Trình duyệt web đóng vai trò là phía khách (Client-side), chỉ gửi yêu cầu HTTP, nhận dữ liệu về, xử lý hiển thị trang và kết nối theo các hyperlink[cite: 3]."
+  },
+  {
+    "_id": "d06df8403b5a63434ec2e6790892be9facc6773d5f89becd6f9acbdda01cfa8e",
+    "explanation": "Siêu liên kết (hyperlink) cho phép người dùng di chuyển không chỉ giữa các trang trong cùng một website mà còn liên kết tới các trang web ở các website khác trên toàn thế giới[cite: 3]. Các phát biểu còn lại đều đúng với đặc điểm của trang chủ, trang con và HTML[cite: 3]."
+  },
+  {
+    "_id": "5f2c40fc71f0ef5fa8282ca6018e45b79831ac2bf36070c336e8f43afa0ab3d3",
+    "explanation": "Tất cả các Web Server đều mặc định đọc và xử lý được các tệp mã nguồn HTML tĩnh (*.htm, *.html)[cite: 3]. Khái niệm Client và Server ở các lựa chọn khác bị tráo đổi định nghĩa cho nhau[cite: 3]. Việc thiết kế tối ưu cho nhiều trình duyệt khác nhau là đúng[cite: 3], nhưng trong các lựa chọn có hai phương án được gắn đánh dấu đúng (bao gồm tính tương thích HTML của Web Server)[cite: 3]."
+  },
+  {
+    "_id": "9d088928ef36d215d8e85c64579f8919a8d22d6d579327c6cb38c1fc62da7a78",
+    "explanation": "HTTP (Hypertext Transfer Protocol) là giao thức chuyên dụng được thiết kế để truyền tải dữ liệu siêu văn bản trên World Wide Web[cite: 3]. FTP dùng truyền tệp, SMTP và POP3 dùng cho thư điện tử[cite: 3]."
+  },
+  {
+    "_id": "22fc860c10f1c6efb44eff85c6c9acf5ffc3d105ffb49d62fd7f6dd45c8f6349",
+    "explanation": "Website được định nghĩa là một tập hợp gồm nhiều trang web (web page) có liên quan đến nhau và thường nằm dưới một tên miền chung[cite: 3]. Các phương án còn lại miêu tả về một trang đơn hoặc một văn bản đơn lẻ[cite: 3]."
+  },
+  {
+    "_id": "596958adc22b93d5f461bf402a800641cf24eade9f6edc76a81595c31de86704",
+    "explanation": "TCP/IP (Transmission Control Protocol / Internet Protocol) là bộ giao thức nền tảng chuẩn của mạng Internet[cite: 3]. HTTP, FTP, POP3 là các giao thức ứng dụng chạy trên nền TCP/IP[cite: 3]."
+  },
+  {
+    "_id": "673e4c86fc63a1670f56874d1b9440c67fb12c860637c3a429286996ab30bddc",
+    "explanation": "Khả năng tương tác hai chiều với người dùng (như bình luận, gửi dữ liệu, tìm kiếm động) là đặc trưng của website động[cite: 3]. Website tĩnh có nội dung cố định nên người dùng cơ bản chỉ có thể đọc nội dung, do đó đây KHÔNG phải là ưu điểm của trang tĩnh[cite: 3]."
+  },
+  {
+    "_id": "2219825d08a489a2a75394215e77724fd7e0739f6c1343806cd421ab8ae31e92",
+    "explanation": "Website động sử dụng cơ sở dữ liệu và mã xử lý phía máy chủ (server-side script) cho phép xử lý dữ liệu nhập từ người dùng và phản hồi tương tác[cite: 3]. Website tĩnh chỉ hiển thị nội dung cố định[cite: 3]."
+  },
+  {
+    "_id": "0175d0ed999e045464761a89d973aebcd025b4b385e42ac080666db0e2f82e3c",
+    "explanation": "WWW là viết tắt chính xác của thuật ngữ World Wide Web (Mạng lưới toàn cầu)[cite: 3]. Các đáp án còn lại sai do viết sai chính tả từ 'World' hoặc 'Wide'[cite: 3]."
+  },
+  {
+    "_id": "5b41f075470706ea7536d08e931a4cf54245426a5169b1816b7e833fde38ec9f",
+    "explanation": "Theo định nghĩa pháp lý và kỹ thuật, website TMĐT phục vụ trọn vẹn hoặc một phần quy trình mua bán/cung ứng dịch vụ trực tuyến từ khâu giới thiệu, đặt hàng, hợp đồng, thanh toán đến hậu mãi[cite: 3]. Các lựa chọn khác chỉ dừng ở mức cung cấp thông tin chung[cite: 3]."
+  },
+  {
+    "_id": "8b0dc96a41851eb253d0b102a0f5dddb3c9b4441e6aff13412aa364095d67953",
+    "explanation": "Hoạt động mua bán trực tiếp tại chợ truyền thống hay siêu thị vật lý không thuộc thương mại điện tử[cite: 3]. Thương mại điện tử bắt buộc phải thực hiện thông qua các phương tiện và mạng điện tử/Internet[cite: 3]."
+  },
+  {
+    "_id": "269b69c46e61a22c89a3d0b1d0a55daa75dc061c9f0f770cf9dfe98cce82be49",
+    "explanation": "Xác định và phân tích yêu cầu (khảo sát mục tiêu, đối tượng, chức năng) là bước đầu tiên trong mọi quy trình phần mềm / website nhằm định hướng chính xác trước khi đi vào thiết kế và triển khai[cite: 3]."
+  },
+  {
+    "_id": "d1e809822a494b7a9b3146cc446e6ff5dc6e36935ae8aa6c05fb0c6bc4f2d00f",
+    "explanation": "Xác định độc giả mục tiêu thuộc khâu khảo sát và phân tích yêu cầu để định hình nội dung, phong cách giao diện và trải nghiệm người dùng phù hợp[cite: 3]."
+  },
+  {
+    "_id": "688d8621d4b02bb1e897578b7392722d3745a57518c04f3059d901363d6a5177",
+    "explanation": "Thanh điều hướng chính (Main Menu/Navigation) theo tiêu chuẩn UX/UI luôn nằm ở phần đầu trang (Website Header) để người dùng dễ quan sát và truy cập ngay lập tức[cite: 3]."
+  },
+  {
+    "_id": "45f11fb45c362237e9be8297296f73c7381af2f500d6e1b4ee2629b727d206fd",
+    "explanation": "CTA là viết tắt của 'Call to Action' (Kêu gọi hành động), thuật ngữ dùng cho các nút/liên kết thúc giục người dùng thực hiện một hành động nhất định (VD: Mua ngay, Đăng ký)[cite: 3]."
+  },
+  {
+    "_id": "a684b341989e55b3269f4bad419a94fd83c1508f2513b9a366afd40c32ed263a",
+    "explanation": "Liên kết tuyến tính bắt buộc người dùng đi theo một thứ tự cố định do nhà thiết kế đặt ra (như các bước thanh toán hay hướng dẫn), chứ không phải đi theo thứ tự tùy ý người dùng mong muốn[cite: 3]."
+  },
+  {
+    "_id": "51536124d29475749d3ede11cd25ce3e629d653f9e4e5380e1816355808fcc2d",
+    "explanation": "Lạm dụng quá nhiều hình ảnh và đa phương tiện chất lượng cao sẽ tăng dung lượng trang web, gây lãng phí băng thông và làm giảm tốc độ tải trang[cite: 3]. Để tăng tốc độ truy cập cần phải tối ưu hóa/nén ảnh[cite: 3]."
+  },
+  {
+    "_id": "16a3444a8e0082aab1c52e6473c879b9d34f02f6a0d9fa00236b4ead034de174",
+    "explanation": "Quy trình xây dựng website chuẩn thường gồm 6 bước cơ bản: 1. Khảo sát/Phân tích yêu cầu - 2. Lập kế hoạch - 3. Thiết kế giao diện - 4. Xây dựng/Phát triển - 5. Kiểm thử & Triển khai - 6. Bảo trì[cite: 3]."
+  },
+  {
+    "_id": "fda06e13363396915163b1e7ddf9acd9b07c3ca6eb71d99a42b26157a508f628",
+    "explanation": "Nội dung trang web bao gồm đầy đủ tất cả các định dạng truyền tải thông tin: văn bản, hình ảnh, âm thanh, video, hoạt ảnh và các tập tin tải về[cite: 3]."
+  },
+  {
+    "_id": "aee3523b095235d0ea50e9e10852a0e013845af04b26a35065df4991890ddb4b",
+    "explanation": "Trong lý thuyết màu sắc truyền thống (sử dụng bánh xe màu RYB), 3 màu cơ bản gốc tạo nên các màu khác là Đỏ (Red), Vàng (Yellow) và Xanh lam (Blue)[cite: 3]."
+  },
+  {
+    "_id": "11759723ad95ad7ed1046f7a0fa6074d769b9a8cbde9d8b455e8d2d0408fcac5",
+    "explanation": "Các cặp màu bổ sung đối diện nhau trên vòng tròn màu gồm: Đỏ - Xanh lục, Vàng - Tím, Cam - Xanh lam[cite: 3]. Trắng - Đỏ không thuộc các cặp màu bổ sung trên bánh xe màu sắc[cite: 3]."
+  },
+  {
+    "_id": "3873967bcad62ce5a9383c3f8b17fb431fa5806c305d2fd22f05a045352f7e78",
+    "explanation": "Phối màu đơn sắc (Monochromatic) sử dụng một sắc thái màu gốc duy nhất phối hợp với các độ đậm/nhạt (tint/shade/tone) khác nhau của chính màu đó[cite: 3]."
+  },
+  {
+    "_id": "048c53b5ccda535e36c9ccde87660beee2265e9516dc7f19f4170b293f15e006",
+    "explanation": "HSB đại diện cho ba thông số cấu thành màu sắc: Hue (Sắc màu), Saturation (Độ bão hòa màu) và Brightness (Độ sáng)[cite: 3]."
+  },
+  {
+    "_id": "b890da6bbb851f8c6857ceba7c79096c378c106180cf85206bc43f80110cf442",
+    "explanation": "Phối màu bổ sung (Complementary) sử dụng các cặp màu nằm đối diện trực tiếp nhau trên vòng tròn màu nên tạo ra năng lượng và độ tương phản thị giác cao nhất[cite: 3]."
+  },
+  {
+    "_id": "707a727543b5c023d1f1cfba8cd4749dfb0d29f87acc6584657fc8c33e4afe47",
+    "explanation": "Ý nghĩa và cách cảm nhận màu sắc bị ảnh hưởng lớn bởi yếu tố văn hóa; các nền văn hóa khác nhau thường có quan niệm rất khác nhau về cùng một màu sắc (VD: màu trắng ở phương Tây tượng trưng cho sự tinh khôi nhưng ở một số nước Đông Á lại liên quan đến tang sự)[cite: 3]."
+  },
+  {
+    "_id": "1e1256fddc07ea5206aeb9fb34e9d40bd42583548342b310190c2b6b07c3c4f4",
+    "explanation": "Không gian màu LAB tách biệt thông tin độ sáng (L) và kênh màu (a, b), giúp việc điều chỉnh ánh sáng và tông màu đạt sự tự nhiên cao mà không làm méo hình, rất thích hợp trong xử lý ảnh kỹ thuật số chuyên sâu[cite: 3]."
+  },
+  {
+    "_id": "5a0c72762dd8ae71aefb1d7d98155b65906f45333afdeaf062bf1048d078571b",
+    "explanation": "RYB (Red-Yellow-Blue) là hệ màu nghệ thuật/hội họa truyền thống chứ không phải là mô hình không gian màu kỹ thuật số chuẩn dùng trong ứng dụng thiết kế đồ họa[cite: 3]."
+  },
+  {
+    "_id": "359da69446cf391ff808efcfd4e76a8203d32f511014b4bf1a9d988e10e09302",
+    "explanation": "Gam màu trung tính bao gồm các màu như Đen, Trắng, Xám, Nâu, Kem[cite: 3]. Đỏ thuộc gam nóng; Xanh lá và Xanh nước biển thuộc gam lạnh[cite: 3]."
+  },
+  {
+    "_id": "71df2d71d694cde3875e0e913339f9a08d3b664b683ff2cd3b75a039ff803bc8",
+    "explanation": "Screen thuộc nhóm hòa trộn làm sáng (Lighter Group) trong Photoshop, có tác dụng nhân các vùng ngược và làm bức ảnh tổng thể sáng lên[cite: 3]. Color Burn và Linear Burn làm tối ảnh[cite: 3]."
+  },
+  {
+    "_id": "6ee78f6891e9d042090018ee762adcf45fd82ede02088f01414096492a68e82f",
+    "explanation": "PPI viết tắt của cụm từ 'Pixels per inch' - mật độ điểm ảnh trên mỗi inch chiều dài hiển thị[cite: 3]."
+  },
+  {
+    "_id": "a98dc70a67aac1e52cf27d3a996df14d4423498187ea936a7734befd0132aeea",
+    "explanation": "Photoshop là phần mềm chỉnh sửa và xử lý đồ họa/hình ảnh, không phải là trình soạn thảo mã nguồn để viết mã CSS[cite: 3]."
+  },
+  {
+    "_id": "0ee7bc67fbed675c2f0dd0f3d94ce7f584a0a3ef3933a7952390ed0700d6a9f8",
+    "explanation": "Gradient Tool là công cụ tô màu chuyển sắc[cite: 3]. Các công cụ Rectangle, Rounded Rectangle, Polygon thuộc nhóm vẽ hình khối (Shape Tool)[cite: 3]."
+  },
+  {
+    "_id": "efe0244577c8831fa4798e7f7c5fea6996c14d0d2bfd597718b9b1c1fb53ae58",
+    "explanation": "Vertical Type Tool là công cụ chuyên biệt trong Photoshop dùng để gõ văn bản theo chiều dọc (từ trên xuống dưới)[cite: 3]."
+  },
+  {
+    "_id": "3bd35e25042ec15b596f6224b25301437fa055c913fe814deceb691ed7413f29",
+    "explanation": "Ảnh vector được định nghĩa dựa trên các thuật toán/công thức toán học (đường nét, điểm nối, đường cong), nên có thể thu phóng vô hạn mà không bị vỡ hay phụ thuộc độ phân giải pixel[cite: 3]."
+  },
+  {
+    "_id": "b512277f3397f172738a94bceee97b644c03a928a62005c3c753808f0c2a7f3b",
+    "explanation": "Phím tắt Ctrl + [ dùng để chuyển layer đang chọn xuống bên dưới layer liền kề[cite: 3]. Phím Ctrl + ] dùng để di chuyển layer lên trên[cite: 3]."
+  },
+  {
+    "_id": "b7cd19336ea86a927fb547dc454c2049ad9bca23478df2ec2080ffab3ee84694",
+    "explanation": "Tính năng Create Warped Text (Wrap Text) cho phép uốn cong, tạo dáng mỹ thuật và biến dạng chữ theo các mẫu hình học có sẵn[cite: 3]."
+  },
+  {
+    "_id": "921ddea0359fb92169cf04f32b13b999153e208fe79f6fb7dbf65e3f5fabd900",
+    "explanation": "Theo thói quen đọc (từ trái sang phải) và quy chuẩn nhận diện thương hiệu, Logo thường đặt ở góc trái hoặc giữa Header[cite: 3]. Đặt Logo bên phải gây bất tiện cho người dùng khi tìm kiếm điểm nhận diện trang[cite: 3]."
+  },
+  {
+    "_id": "31e4bb2890b46bf7307f42c47546d2d1e77296fcff3edc3aafdd818d668ef513",
+    "explanation": "Thẻ <body> chứa toàn bộ các thành phần hiển thị trực quan của trang web mà người dùng nhìn thấy (văn bản, hình ảnh, bảng, video)[cite: 3]. Thẻ <head>, <title>, <meta> chứa thông tin cấu hình và meta dữ liệu[cite: 3]."
+  },
+  {
+    "_id": "dbd63871992b192c697f37d2cf664943b061424c5b0f4baed7b47340336c16da",
+    "explanation": "Polygon Lasso Tool cho phép tạo vùng chọn bằng cách chấm các điểm nối tạo thành đường gấp khúc/đa giác hình học[cite: 3]."
+  },
+  {
+    "_id": "c7111094a353a4e3b1a8126d22bf7f3dd35de6b9d026395ca5cf82fd596faa7b",
+    "explanation": "Thuộc tính `color` trong thẻ `<font>` dùng để quy định màu chữ[cite: 3]. Thuộc tính `bgcolor` quy định màu nền[cite: 3]."
+  },
+  {
+    "_id": "8a73720ee85f1df95cb81d792cc8b3b70addccbffcec2d4870add484144438a0",
+    "explanation": "Phối màu tương đồng (Analogous) sử dụng 3 màu đứng cạnh nhau trên bánh xe màu[cite: 3]. Đơn sắc chỉ dùng 1 màu base[cite: 3], Tương phản dùng 2 màu đối diện[cite: 3]."
+  },
+  {
+    "_id": "07595173800bdd81e7f7efba5631b6171a9db58616e9569175f71ef4d71886a2",
+    "explanation": "Chân trang (Website Footer) nằm ở cuối cùng của trang web, sự xuất hiện của nó báo hiệu người dùng đã cuộn hết nội dung trang[cite: 3]."
+  },
+  {
+    "_id": "46ad294d044fe34032617f1d52ac2d674531754a90c273a2b9cbded4485cb667",
+    "explanation": "Trong HSB, Saturation phản ánh độ đậm đặc/độ bão hòa màu sắc (từ xám xỉn đến màu thuần khiết)[cite: 3]."
+  },
+  {
+    "_id": "351329285661143e50df9a167309eab85f6f58f8add68859bdd058a2a63cc68c",
+    "explanation": "Lệnh `File > Save for Web & Devices` chuyên dùng để xuất ảnh tối ưu hóa dung lượng và định dạng cho môi trường web[cite: 3]."
+  },
+  {
+    "_id": "c70c2eb81fc927aee483def1ce092458c87d3b9a7d5fbf01cbe72f56bdbc37c9",
+    "explanation": "Đỏ và Xanh lục là cặp màu đối diện trực tiếp trên bánh xe màu nên có độ tương phản màu sắc rất cao[cite: 3]."
+  },
+  {
+    "_id": "5797788503dc472c918a556297798ee74b4ad090bf3bc453ccdf0fb15e866ff3",
+    "explanation": "Thuộc tính `size` của thẻ `<font>` trong HTML chuẩn cũ tiếp nhận giá trị nguyên trong khoảng từ 1 (nhỏ nhất) đến 7 (hoặc 1 đến 6 tùy theo đặc tả bài học)[cite: 3]."
+  },
+  {
+    "_id": "55b4074ae3439fa9ebf052086dba019748f8d6de03e0711a63a4056793958317",
+    "explanation": "Lệnh `Merge Visible` gộp tất cả các layer đang bật chế độ hiển thị (có biểu tượng con mắt) thành 1 layer duy nhất[cite: 3]."
+  },
+  {
+    "_id": "737943b6fc68e8e63b8e5a6b264a000385869deebe3f10a5f681f85f18264721",
+    "explanation": "Alt Tag (Alternative Text) cung cấp đoạn văn bản thay thế khi hình ảnh của slice bị lỗi hoặc không tải được trên trình duyệt[cite: 3]."
+  },
+  {
+    "_id": "cdb59e272bfe36f122fb645436048493c7aa9ef64b4b331a3bfec4cad80235ad",
+    "explanation": "Thẻ `<caption>` đặt bên trong thẻ `<table>` được dùng để định nghĩa tiêu đề cho toàn bộ bảng và mặc định được căn giữa phía trên bảng[cite: 3]."
+  },
+  {
+    "_id": "7394eebb9a130bde1d8b596d8b200c52780f566de00683336d552d78bf459c3c",
+    "explanation": "Magic Wand Tool hoạt động dựa trên thuật toán chọn các điểm ảnh có màu sắc đồng nhất hoặc tương đồng theo độ lệch màu (Tolerance)[cite: 3]."
+  },
+  {
+    "_id": "6eecfd79d8409bc01a9b039c67a8fc626b77ef9940aaf2c47e302655904a2b07",
+    "explanation": "Gam màu lạnh (xanh dương, xanh lá, tím nhạt) mang lại cảm giác tươi mát, nhẹ nhàng, dễ chịu và thư thái[cite: 3]."
+  },
+  {
+    "_id": "240ad9ab1121a1c0b5aa8acfff6c883796510c3b21d0a612fa5f17ddb02e5978",
+    "explanation": "Cổng (Port) 80 là cổng mặc định dành cho giao thức HTTP dùng để truyền tải các trang web[cite: 3]. Port 21 dùng cho FTP, 110 cho POP3[cite: 3]."
+  },
+  {
+    "_id": "ca7bdeea7633169c14c76359e4e76977de8922a500a71a9047951048505503c2",
+    "explanation": "URL là viết tắt của 'Uniform Resource Locator' (Mặc dù lựa chọn ghi 'Uniform Resource Location' là đáp án chuẩn xác nhất trong các phương án được đưa ra)[cite: 3]."
+  },
+  {
+    "_id": "03ef4dffb29ca1c8bbd32860a65d2c3ba470b9dad17a7a9088d88fd798fe05a0",
+    "explanation": "Cho phép người dùng chủ động tùy chỉnh cỡ chữ hỗ trợ tính khả dụng (Accessibility) và trải nghiệm người dùng theo nhu cầu cá nhân[cite: 3]."
+  },
+  {
+    "_id": "b0e8336fcae76be45ad167990a9f954d67fa3c30d78fd90864e36a46e9d7e9da",
+    "explanation": "Màn hình kỹ thuật số và trình duyệt web phát ánh sáng hiển thị theo mô hình phối màu cộng RGB (Red-Green-Blue)[cite: 3]."
+  },
+  {
+    "_id": "a61df1fa345e1b079f29182c289ba0a62d1d985443900c3cdfced3b412734fb7",
+    "explanation": "Trong pha trộn màu sắc, Đỏ (Red) kết hợp với Xanh lam (Blue) sẽ tạo ra màu Tím (Purple/Violet)[cite: 3]."
+  },
+  {
+    "_id": "a7e2feb0ea4ad97660482b55266619d7cefb206a7c29415ee5c7713ad6e325bf",
+    "explanation": "Gam màu nóng (Đỏ, Cam, Vàng) gây kích thích thị giác mạnh, gợi sự sôi nổi, tươi vui và thu hút sự chú ý nhanh chóng[cite: 3]."
+  },
+  {
+    "_id": "dad63534a05d018da322edbf9aff227960e49fd8f93e2d5acc7882d51bce3399",
+    "explanation": "Cảm nhận về màu sắc phụ thuộc vào độ tuổi, giới tính, văn hóa nhưng trình độ học vấn không quyết định đến sinh lý hay tâm lý cảm thụ màu sắc[cite: 3]."
+  },
+  {
+    "_id": "10cee9c4a788fc3149704f6bc0d01f4f77700748822ca771fb45003886fe085e",
+    "explanation": "Theo nguyên lý phối màu trừ/cơ bản, Vàng (Yellow) pha với Xanh lam (Blue) tạo ra màu Xanh lá (Green)[cite: 3]."
+  },
+  {
+    "_id": "bd84cddf435962da2a115dae4f3a95c385f055a20c0fd1d7f26ff02305c98ed8",
+    "explanation": "Rectangular Marquee Tool dùng để tạo vùng chọn hình vuông hoặc chữ nhật[cite: 3]. Rectangle Tool là công cụ vẽ hình khối chứ không tạo vùng chọn[cite: 3]."
+  },
+  {
+    "_id": "d00bf36ac0195fb011428860fedee6c27ab1fdfc6eca3ba1039612afa78930c8",
+    "explanation": "Type Tool (phím tắt T) là công cụ chuyên dụng trong Photoshop để nhập và xử lý văn bản[cite: 3]."
+  },
+  {
+    "_id": "ac218fae15146153ddb6efa2c3a356bd77817a63cfbb58539e8a061c8bc3a21d",
+    "explanation": "Nhóm bộ lọc Blur (Gaussian Blur, Motion Blur...) có chức năng làm mờ/nhòe hình ảnh[cite: 3]. Sharpen giúp làm nét ảnh[cite: 3]."
+  },
+  {
+    "_id": "2dbf0d2329fae6af221bd3f815ceb1589a9d5d71c5869ea055c7635044fcf08c",
+    "explanation": "Prototype là bản mẫu có độ chân thực cao nhất, cho phép thực hiện các thao tác mô phỏng tương tác chuyển trang sống động trước khi lập trình thực tế[cite: 3]."
+  },
+  {
+    "_id": "97fb440c212b71e26996f47a01a890e0589c9c61ee7b5655008dc3f4c03686b3",
+    "explanation": "Sketch là bản phác thảo nhanh bằng tay hoặc nét đơn giản để định hình ý tưởng sơ khởi[cite: 3]."
+  },
+  {
+    "_id": "0526aa4e7953ecb21b5b40017644facddf1fc5680338595fa8a18fe26c24d240",
+    "explanation": "Tổ hợp phím Ctrl + W dùng để đóng tập tin hiện tại trong các ứng dụng Adobe bao gồm Photoshop[cite: 3]."
+  },
+  {
+    "_id": "1798caf6494b2340de9b85fbb461f25f6c006f784fb7004177c605eebd07b2ad",
+    "explanation": "Lệnh `Flatten Image` tiến hành gộp toàn bộ các lớp (layers) hiện có thành duy nhất một lớp nền `Background` bị khóa[cite: 3]."
+  },
+  {
+    "_id": "8dd2e30733c0a3b14391465b407560ab9e2fc7420e25278b0324a43f1014f378",
+    "explanation": "Khi mở một tài liệu mới tiêu chuẩn trong Photoshop, ứng dụng luôn mặc định tạo ra 1 lớp duy nhất tên là `Background`[cite: 3]."
+  },
+  {
+    "_id": "2a52766b0c8af19c5e5aa4a3ce925761c0a3a932c61adc1201f1e5d0e859d0eb",
+    "explanation": "Chế độ hòa trộn Multiply làm tối ảnh bằng cách nhân sắc độ; điểm ảnh màu trắng (có giá trị 255) sẽ trở nên trong suốt/loại bỏ[cite: 3]."
+  },
+  {
+    "_id": "1366ccf7cfcf09c4408180e9904af11d331e5b109458f696910271682ac93822",
+    "explanation": "Thuộc tính `bgcolor` trong thẻ `<body>` (HTML4) dùng để đặt màu nền cho toàn bộ trang web[cite: 3]."
+  },
+  {
+    "_id": "3a701c30a779da4a6eaabd0093d1c6568016aa9d016021b493089756034b74f3",
+    "explanation": "Lựa chọn 'HTML and Images' sẽ sinh ra 1 tệp mã HTML liên kết và 1 thư mục chứa toàn bộ hình ảnh cắt (slices)[cite: 3]."
+  },
+  {
+    "_id": "70a4cd31606258ed6972240a79635ef164641b716a47f35de5d8bfcd234db97c",
+    "explanation": "Thông số Target quy định cửa sổ/tab trình duyệt sẽ mở liên kết (VD: `_blank` mở cửa sổ mới)[cite: 3]."
+  },
+  {
+    "_id": "ecdd1211ced8e54ede5177db5d1c22a8030d52c065da33190fa3515e2a369df6",
+    "explanation": "Multiply làm tăng độ đậm và giảm độ sáng của bức ảnh, giúp ảnh trông tối hơn[cite: 3]."
+  },
+  {
+    "_id": "beefeb04db2d125b88e317fe37085f7b1cadd55d88c63bdd7dc7cf0aa2b48dee",
+    "explanation": "Eraser Tool là công cụ tẩy xóa chi tiết/điểm ảnh, không dùng để tô màu như Brush, Gradient hay Paint Bucket[cite: 3]."
+  },
+  {
+    "_id": "527422e95baaaf19aafbd09d330a53188828fd98f79fcf27c7dd3659c42fbefc",
+    "explanation": "Thao tác `View > Lock Slices` dùng để cố định không cho dịch chuyển hoặc mở khóa các lát cắt[cite: 3]."
+  },
+  {
+    "_id": "bde83a8bd5bbd34fdeceaa2b577177a8b1c7c5998cf11b0f44bfdb4471fccc91",
+    "explanation": "Thẻ `<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />` khai báo bảng mã UTF-8 giúp trình duyệt hiển thị đúng tiếng Việt có dấu[cite: 3]."
+  },
+  {
+    "_id": "0b96829e0c5b7bd5e1f9b5b5a812c7d832811aa979e9399ee85b65ee6fb93d5b",
+    "explanation": "Khung tìm kiếm thường nằm ở Header trang web để người dùng dễ nhìn thấy ngay khi truy cập[cite: 3]."
+  },
+  {
+    "_id": "2a97d706d954db051460b4688f5abf7cf582561ceef139e9fd746827851644c7",
+    "explanation": "Tỉ lệ vàng (Golden Ratio) kí hiệu phím phi ($\\Phi$) có giá trị xấp xỉ 1.618[cite: 3]."
+  },
+  {
+    "_id": "aa74b0e562857ba3f975377a5120574bd1f2020d4737b219b3986aa8b45f55c5",
+    "explanation": "Bánh xe màu sắc tiêu chuẩn (Color Wheel) bao gồm 12 màu chính (3 màu cấp 1, 3 màu cấp 2 và 6 màu cấp 3)[cite: 3]."
+  },
+  {
+    "_id": "374f757f056b23ec126f5148aec937cea5aaae0b93cce0db0b22577fc2e0f45c",
+    "explanation": "Xanh nước biển (Blue) đại diện điển hình cho gam màu lạnh[cite: 3]. Cam, Hồng, Vàng thuộc gam nóng[cite: 3]."
+  },
+  {
+    "_id": "dc98f533a0ac757edae67bc45e88797a66cfc5f39d3a7713ee9211db889cd987",
+    "explanation": "Phối màu vô sắc (Achromatic) chỉ dùng màu đen, trắng và xám (0 màu quang phổ trên bánh xe màu), ít hơn 3 màu[cite: 3]."
+  },
+  {
+    "_id": "b00d5cde672a4e813b9377ea85d4603698845b256714f5075b76c067bda337f5",
+    "explanation": "Hệ màu CMYK dựa trên cơ chế hấp thụ ánh sáng của mực in (Cyan, Magenta, Yellow, Key/Black) nên phù hợp nhất với in ấn[cite: 3]."
+  },
+  {
+    "_id": "c4fb9c2f95f3f2cb21d275af8534e77e491a09f2be99d81bac9dc99af78997c9",
+    "explanation": "Thuộc tính `alt` (Alternate Text) hiển thị văn bản thay thế nếu ảnh không thể hiển thị[cite: 3]."
+  },
+  {
+    "_id": "3de7c75c6b5252e768ae8374d298053b587330993cab56ae12717a0ee2c66cf0",
+    "explanation": "DNS là viết tắt của 'Domain Name Server' (Máy chủ phân giải tên miền)[cite: 3]."
+  },
+  {
+    "_id": "d16de742847d3d5c176b92f1f6a412bee5d3060203841047207b9a31694e64f0",
+    "explanation": "Nhóm công cụ Marquee (Rectangular Marquee, Elliptical Marquee) chuyên dùng tạo vùng chọn dạng hình học chuẩn[cite: 3]."
+  },
+  {
+    "_id": "5e3bb25d464c787fe3050279832c6386ff5f47bb1c956a952ebd5ee74a03c99a",
+    "explanation": "Trong thẻ `<hr>`, thuộc tính `size` dùng để thiết lập độ dày (chiều cao) của đường kẻ ngang[cite: 3]."
+  },
+  {
+    "_id": "f67018ace615f4a7a2b3a8b68a71493896f4d27da2c3a03806af8b5d1aab4501",
+    "explanation": "Thẻ `<input type=\"password\">` ẩn các ký tự nhập vào bằng dấu chấm/sao để bảo mật mật khẩu[cite: 3]."
+  },
+  {
+    "_id": "76a13ff6f04bd4b2ec0b60f5675a21713818dfd9ced80f64bc8f1b75def2fee7",
+    "explanation": "Địa chỉ IPv4 chuẩn bao gồm 32 bit nhị phân được chia thành 4 octet[cite: 3]."
+  },
+  {
+    "_id": "638d02301f57bab3a77690134c71f44e557f91adb06a1d87d149c0025b3e5b4b",
+    "explanation": "Thẻ `<em>` (Emphasis) dùng để nhấn mạnh nghĩa và hiển thị chữ nghiêng tương tự như thẻ `<i>` (Italic)[cite: 3]."
+  },
+  {
+    "_id": "bb2c790127e326bf041781e543454fce1cc87561cc641d5f49c27a154157b64a",
+    "explanation": "Thuộc tính `name` (hoặc `id` trong HTML5) của thẻ `<a>` dùng để gán tên định vị vị trí điểm neo (bookmark) trên trang[cite: 3]."
+  },
+  {
+    "_id": "16f320a33f45c6690904ae7f771bfb6346adc5d33ff64d8e1dcf74910cd721ce",
+    "explanation": "ARPANET (Advanced Research Projects Agency Network) do Bộ Quốc phòng Mỹ phát triển là tiền thân của mạng Internet[cite: 3]."
+  },
+  {
+    "_id": "50d2a1e33fe56ae16449c508aa67ac29f9941b1922e4a2c1c561bbf367cc45e6",
+    "explanation": "Tùy chọn `Fixed Aspect Ratio` trên thanh Options giúp thiết lập sẵn tỉ lệ giữa chiều rộng và chiều cao trước khi cắt[cite: 3]."
+  },
+  {
+    "_id": "53906274218a349f688bee3f7ef1fec4881a3fb930bc23f04f5d7389b9b17511",
+    "explanation": "Chọn 'No Image' trong Slice Options sẽ biến slice thành một vùng chứa văn bản HTML thuần thay vì xuất ra file hình ảnh[cite: 3]."
+  },
+  {
+    "_id": "d5b7b5cdd24eaea29216e672a32941da6affe9b0d032757d0dd1d07888135bc3",
+    "explanation": "Lệnh `Layer > New Layer-based Slice` tạo lát cắt bao quanh chính xác kích thước của lớp (layer) đang chọn[cite: 3]."
+  },
+  {
+    "_id": "b44e06e32608dd25b5ceef780651b1dafbc84c421eb0cd1956c170894c524c40",
+    "explanation": "Slice Select Tool là công cụ chuyên dùng để nhấp chọn, di chuyển hoặc thay đổi thông số của các lát cắt[cite: 3]."
+  },
+  {
+    "_id": "d57111d30299d9e7b59831b482336a03728eb091e1b5c3091ada7a95c73b74d7",
+    "explanation": "Quick Selection Tool tự động nhận diện các ranh giới dựa vào sự tương phản sắc thái, thích hợp khi phông nền và đối tượng có sự khác biệt rõ rệt[cite: 3]."
+  },
+  {
+    "_id": "72a0b7a4a89638a67218f021a977e5f82f8fa79a4df22468a989f8a711645b8d",
+    "explanation": "HTML/XHTML chỉ là ngôn ngữ đánh dấu tĩnh để cấu trúc trang web, không phải ngôn ngữ lập trình máy chủ để trực tiếp truy vấn hay thao tác với cơ sở dữ liệu[cite: 3]."
+  },
+  {
+    "_id": "8ec6628a0814eb74528f6a8ee3c47af28eb6fd99b4070c4f8f1820e1b6967f59",
+    "explanation": "Thẻ `<tt>` (Teletype text) định dạng văn bản bằng phông chữ đơn cách (Monospace) như trên máy đánh chữ[cite: 3]."
+  },
+  {
+    "_id": "77a04b91251f2c599e335c99bc4535925108a517a049a1aed413181481d488ca",
+    "explanation": "Lệnh `View > Clear Slices` xóa toàn bộ các đường cắt đang hiện diện trong file[cite: 3]."
+  },
+  {
+    "_id": "da59f324a27a877207566ab3356da4bc448361f6dbfada372867944bbd69a2c3",
+    "explanation": "Mục Message Text quy định nội dung hiển thị dưới thanh trạng thái trình duyệt khi di chuột qua lát cắt[cite: 3]."
+  },
+  {
+    "_id": "8a96326ffa0dd27186abeb2c7939cce9a98431719892461b2555ca7cb8c3e460",
+    "explanation": "Orientation quyết định hướng giấy hiển thị/in (khung đứng - Portrait hoặc khung ngang - Landscape)[cite: 3]."
+  },
+  {
+    "_id": "4bc294be436df407cdda8afa5b3f1e9980b713e4e4f6c3607d75acdc17be9c02",
+    "explanation": "Chế độ màu Bitmap chỉ sử dụng đúng 2 màu thuần túy là Đen và Trắng (1-bit color depth)[cite: 3]. GrayScale hỗ trợ các mức xám trung gian[cite: 3]."
+  },
+  {
+    "_id": "9538e2498e6bb2f200a0f44f24d589e0003187e0a355bb10be040cd25318910d",
+    "explanation": "Đó là thao tác `View > Clear Slices`[cite: 3]."
+  },
+  {
+    "_id": "e90c1c699b271f250f0bf5b4ece508ca4ce9ad1656dd4ab36dccfd5cfd52c19e",
+    "explanation": "Lấy 1000px chia cho tỉ lệ vàng 1.618 ta được kích thước xấp xỉ 618px (trong đáp án câu hỏi trắc nghiệm là 616px)[cite: 3]."
+  },
+  {
+    "_id": "35c64f5f31c503e7e127abf60373aa2c2f27852e1857bdfcba06be5b37b7adb4",
+    "explanation": "Lasso Tool cho phép khoanh vùng chọn tự do theo thao tác rê chuột cá nhân[cite: 3]."
+  },
+  {
+    "_id": "1529a6c63c06a394494b9b1b3831fcee10e9b5f9a25fbd6e16d52ed7f14e1f4b",
+    "explanation": "Thuộc tính `title` tạo tooltip hiển thị chú thích khi người dùng di chuột (hover) lên hình ảnh[cite: 3]."
+  },
+  {
+    "_id": "df065e469db07b5b10b70b42a982c1bb66ea6d1144f264a7a586bf889a801e82",
+    "explanation": "Phím C (Crop Tool Group) là phím tắt mặc định để gọi công cụ Slice Tool/Crop Tool trong Photoshop[cite: 3]."
+  },
+  {
+    "_id": "a2bfe28ae83c90c12f7b04aea0957dbe9b474a8422bc809ec7abe0b9aab81e67",
+    "explanation": "Phối màu tương phản/bổ sung (Complementary) sử dụng đúng 2 màu nằm ở 2 vị trí đối diện nhau trên vòng tròn màu[cite: 3]."
+  },
+  {
+    "_id": "ff7ca702418e322e86ebf89195def6444f16131f2ae66e6d2de6385e16d32c85",
+    "explanation": "CMYK là viết tắt của Cyan (Xanh lơ), Magenta (Hồng cánh sen), Yellow (Vàng) và Key/Black (Đen)[cite: 3]."
+  },
+  {
+    "_id": "c70b547937fb8b0752631be0b21feb121a4084b4c128a93952992bb9a7880a21",
+    "explanation": "Màu Vàng (Yellow) thuộc gam màu nóng[cite: 3]. Xanh lá, Xanh lam thuộc gam lạnh[cite: 3]."
+  },
+  {
+    "_id": "8749992d6fa67e58210fbbdbc20f56d087af6fea05db2f847ac12827f46f2d7d",
+    "explanation": "Slice Tool được thiết kế đặc thù để cắt một hình ảnh lớn thành nhiều file nhỏ phục vụ cho trang web[cite: 3]."
+  },
+  {
+    "_id": "d0a2ff50843687cd78db62f5620c2321fe31e80e44b107556874475d62ea4aff",
+    "explanation": "HTML cung cấp 6 cấp độ tiêu đề từ `<h1>` (lớn nhất) đến `<h6>` (nhỏ nhất)[cite: 3]."
+  },
+  {
+    "_id": "073638caa18b8170f41b19ed43b0203145d76b78b7199c238af6150865f40b36",
+    "explanation": "XHTML viết tắt của 'eXtensible HyperText Markup Language'[cite: 3]."
+  },
+  {
+    "_id": "3df1e9dd9ec22934afb9be49b8bdf7987ea96ec0e1f424b660b923e057cf3c49",
+    "explanation": "Combine Slices được dùng để kết hợp/gộp hai hoặc nhiều lát cắt liền kề thành 1 lát cắt duy nhất[cite: 3]."
+  },
+  {
+    "_id": "bcbfe64ca33308a567fd40296d4bcc1be9046365de5ec150a41e3d6d9df6d66b",
+    "explanation": "Thuộc tính `multiple` trong thẻ `<select>` cho phép người dùng chọn cùng lúc nhiều phương án[cite: 3]."
+  },
+  {
+    "_id": "1072b4c8c127d48c43cd066b2045243fbd69c2c8f0c2ca4c6b2f15d0c3f02f30",
+    "explanation": "Background layer bị khóa mặc định nên không thể sắp xếp lại vị trí/thứ tự trong bảng Layers trừ khi chuyển nó thành Layer thông thường[cite: 3]."
+  },
+  {
+    "_id": "ddaabd8c561edbb94e55a871806b3c0191534688f53115ba9c560e3a81c4b82a",
+    "explanation": "Thẻ `<strong>` dùng để làm đậm chữ và nhấn mạnh ý nghĩa ngữ nghĩa, tương đương hiển thị với thẻ `<b>` (Bold)[cite: 3]."
+  },
+  {
+    "_id": "721b6863865f21306ac197d8c18fa83a30bf962f989b3c15170994a43553395a",
+    "explanation": "Áp dụng tỉ lệ 1.618: Lấy cỡ chữ tiêu đề 20pt / 1.618 $\\approx$ 12.36pt, làm tròn thành 12pt[cite: 3]."
+  },
+  {
+    "_id": "2479bc5894755fc9316b8a3bb56b6a7423e813319912448116e3c6aad286099d",
+    "explanation": "Thẻ `<sup>` (Superscript) hiển thị ký tự dạng chỉ số trên (VD: $x^2$)[cite: 3]. Thẻ `<sub>` hiển thị chỉ số dưới[cite: 3]."
+  },
+  {
+    "_id": "82b674898745bc59f8e0892e0e50afff3100fed4bf156a9d486d4ca09e1850ec",
+    "explanation": "HTML viết tắt của cụm từ 'HyperText Markup Language' (Ngôn ngữ đánh dấu siêu văn bản)[cite: 3]."
+  },
+  {
+    "_id": "874445dc0d7793bfe1c89b92e71a1f0a9a8f1b9c5309e07ca578f8cb44c7f134",
+    "explanation": "PPI (Pixels Per Inch) là đơn vị đo mật độ/độ phân giải của hình ảnh kỹ thuật số[cite: 3]."
+  },
+  {
+    "_id": "7b8e9abc005b50f3b81c0451e3cdbb7f7aca65acded01c55893c89fe91735c86",
+    "explanation": "Chế độ GrayScale biến đổi ảnh thành dải màu xám gồm các sắc độ từ đen đến trắng[cite: 3]."
+  },
+  {
+    "_id": "d2fcc372e905edbbed0493325319193d756d0610f57dd785d3497332fee47871",
+    "explanation": "Lựa chọn 'Selected Slices' trong hộp thoại xuất bản cho phép chỉ xuất các lát cắt đang được chọn[cite: 3]."
+  },
+  {
+    "_id": "1e20db793a0dead2121bb47570c953d082bf9d6b98d0e1b5884004860858524f",
+    "explanation": "`align` không phải là thuộc tính hợp lệ của thẻ `<form>`[cite: 3]. Thẻ biểu mẫu thường có các thuộc tính `name`, `method` (GET/POST) và `action`[cite: 3]."
+  },
+  {
+    "_id": "04ee0ff884730de2257d7e4755ef3ee1e03cfb181479d7077fd8e94ce49c8dd6",
+    "explanation": "Ctrl + J là phím tắt để sao chép lớp hiện tại hoặc vùng chọn thành một lớp mới[cite: 3]."
+  },
+  {
+    "_id": "3f048c9ce924e7120194fc27dfa3991bc23f58fb599e6da08887bdebc7850174",
+    "explanation": ".psd (Photoshop Document) là định dạng tập tin gốc của Adobe Photoshop lưu trữ đầy đủ các lớp và thiết lập chỉnh sửa[cite: 3]."
+  },
+  {
+    "_id": "f18b6c33cb37498ada4749596ba1195c3c608c2322651859e42d277a092c0faa",
+    "explanation": "Phím U là phím tắt kích hoạt nhóm công cụ Shape Tool trong Photoshop[cite: 3]."
+  },
+  {
+    "_id": "58826e0cdf2656b88c33c227e802cf86b7eb5e4ce7e0ec16e8dcf11d98566399",
+    "explanation": "Định dạng PNG (đặc biệt PNG-24) hỗ trợ độ trong suốt (transparency) và tối ưu hóa nén dung lượng phù hợp cho web[cite: 3]."
+  },
+  {
+    "_id": "01dc79300682280d7ea36468eff4df01396c47ca04ee23fdaa0fa53495cb2bc9",
+    "explanation": "Thao tác `View > Show > Slices` dùng để bật hoặc tắt chế độ hiển thị các lát cắt[cite: 3]."
+  },
+  {
+    "_id": "eac5f0d460e8d671cd022d357266f8e28c7c646e0bd9767b9c03b991c2459788",
+    "explanation": "Nhóm bộ lọc Distort chứa các công cụ làm biến dạng hình học (như uốn cong, xoắn, bóp méo) của hình ảnh[cite: 3]."
+  }
+]

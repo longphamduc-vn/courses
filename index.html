@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Ôn Tập Trắc Nghiệm Đa Môn</title>
-    <!-- Liên kết file Manifest -->
     <link rel="manifest" href="manifest.json">
-    
-    <!-- Cấu hình màu thanh trạng thái cho iOS / Android -->
     <meta name="theme-color" content="#4f46e5">
     <style>
         :root {
@@ -22,6 +19,9 @@
             --success-light: #dcfce7;
             --danger: #dc2626;
             --danger-light: #fee2e2;
+            --info-light: #f0f9ff;
+            --info-border: #bae6fd;
+            --info-text: #0369a1;
             --radius-md: 8px;
             --radius-lg: 12px;
             --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -88,9 +88,31 @@
         .feedback-badge.correct { background: var(--success); color: white; }
         .feedback-badge.wrong { background: var(--danger); color: white; }
 
-        .card-actions { margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color); display: flex; justify-content: flex-end; }
+        /* KHU VỰC HIỂN THỊ GIẢI THÍCH */
+        .explanation-box {
+            margin-top: 0.85rem;
+            padding: 0.85rem;
+            background-color: var(--info-light);
+            border: 1px solid var(--info-border);
+            border-radius: var(--radius-md);
+            color: var(--text-main);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+        .explanation-title {
+            font-weight: 700;
+            color: var(--info-text);
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .card-actions { margin-top: 0.85rem; padding-top: 0.75rem; border-top: 1px dashed var(--border-color); display: flex; justify-content: flex-end; gap: 0.5rem; }
         .btn-reveal { background: transparent; border: 1px solid var(--border-color); padding: 0.35rem 0.75rem; border-radius: var(--radius-md); font-size: 0.8rem; font-weight: 600; color: var(--text-muted); cursor: pointer; }
         .btn-reveal:hover { color: var(--primary); border-color: var(--primary); background: var(--primary-light); }
+        .btn-explanation { background: transparent; border: 1px solid var(--info-border); padding: 0.35rem 0.75rem; border-radius: var(--radius-md); font-size: 0.8rem; font-weight: 600; color: var(--info-text); cursor: pointer; }
+        .btn-explanation:hover { background: var(--info-light); }
 
         .empty-state { text-align: center; padding: 3rem 1rem; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px dashed var(--border-color); color: var(--text-muted); }
     </style>
@@ -105,7 +127,6 @@
     <div class="dashboard-container">
         <!-- SIDEBAR -->
         <aside class="sidebar">
-            <!-- 1. CHỌN MÔN HỌC -->
             <div class="panel-card">
                 <h3>1. Chọn Môn Học</h3>
                 <div style="margin-bottom: 0.5rem; display: flex; justify-content: space-between; font-size: 0.75rem;">
@@ -115,12 +136,11 @@
                 <div id="courses-list" class="courses-checkbox-list"></div>
             </div>
 
-            <!-- 2. TÌM KIẾM & LỌC -->
             <div class="panel-card">
                 <h3>2. Tìm kiếm & Lọc</h3>
                 <div class="form-group">
                     <label for="search-input">Từ khóa tìm kiếm</label>
-                    <input type="text" id="search-input" class="form-control" placeholder="Nhập từ khóa câu hỏi..." oninput="applyFilters()">
+                    <input type="text" id="search-input" class="form-control" placeholder="Nhập từ khóa câu hỏi hoặc giải thích..." oninput="applyFilters()">
                 </div>
                 <div class="form-group">
                     <label for="filter-level">Lọc Mức độ (Level)</label>
@@ -136,7 +156,6 @@
                 </div>
             </div>
 
-            <!-- 3. CẤU HÌNH HIỂN THỊ -->
             <div class="panel-card">
                 <h3>3. Sắp xếp & Gom Nhóm</h3>
                 <div class="form-group">
@@ -163,6 +182,14 @@
                     <span style="font-size: 0.85rem; font-weight: 600;">Hiện tất cả đáp án</span>
                     <label class="switch">
                         <input type="checkbox" id="toggle-answers" onchange="renderQuestions()">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <!-- TÙY CHỌN HIỆN TẤT CẢ GIẢI THÍCH -->
+                <div class="toggle-wrapper">
+                    <span style="font-size: 0.85rem; font-weight: 600;">Hiện tất cả giải thích</span>
+                    <label class="switch">
+                        <input type="checkbox" id="toggle-explanations" onchange="renderQuestions()">
                         <span class="slider"></span>
                     </label>
                 </div>
@@ -196,12 +223,13 @@
 
     <script>
         /* ==========================================================================
-           1. KHAI BÁO DANH SÁCH THƯ MỤC MÔN HỌC (Không cần dùng file courses.json)
+           1. DANH SÁCH MÔN HỌC
            ========================================================================== */
         const DEFAULT_COURSE_FOLDERS = [
-            { id: '25434', name: 'Thiết kế Web', folder: '25434' },
-            // Khi muốn thêm môn mới, bạn chỉ cần chèn 1 dòng vào đây:
-            // { id: 'chemistry', name: 'Môn Hóa Học', folder: 'chemistry' }
+            { id: '25434', name: 'Môn 25434', folder: '25434' },
+            { id: 'math', name: 'Môn Toán', folder: 'math' },
+            { id: 'physics', name: 'Môn Vật Lý', folder: 'physics' },
+            { id: 'english', name: 'Môn Tiếng Anh', folder: 'english' }
         ];
 
         /* ==========================================================================
@@ -214,7 +242,7 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             renderCourseCheckboxes();
-            selectAllCourses(true); // Mặc định tự động chọn tất cả môn khi mở trang
+            selectAllCourses(true);
         });
 
         function renderCourseCheckboxes() {
@@ -247,7 +275,7 @@
         }
 
         /* ==========================================================================
-           2. TỰ ĐỘNG ĐỌC DỮ LIỆU TỪ CÁC THƯ MỤC MÔN HỌC
+           2. TỰ ĐỘNG ĐỌC DỮ LIỆU CẢ 3 FILE (questions, cate, explanation)
            ========================================================================== */
         async function loadSelectedCoursesData() {
             allMergedQuestions = [];
@@ -259,16 +287,27 @@
             for (const course of activeCourses) {
                 try {
                     const pathFolder = `./data/courses/${course.folder}`;
-                    const [resQ, resC] = await Promise.all([
+                    
+                    // Nạp đồng thời 3 file JSON[cite: 3]
+                    const [resQ, resC, resE] = await Promise.all([
                         fetch(`${pathFolder}/questions.json`),
-                        fetch(`${pathFolder}/cate.json`)
+                        fetch(`${pathFolder}/cate.json`),
+                        fetch(`${pathFolder}/explanation.json`).catch(() => null) // Nếu thiếu file explanation.json thì bỏ qua
                     ]);
 
                     let rawQ = resQ.ok ? parseRobustJSON(await resQ.text()) : [];
                     let rawC = resC.ok ? parseRobustJSON(await resC.text()) : [];
+                    let rawE = (resE && resE.ok) ? parseRobustJSON(await resE.text()) : [];
 
+                    // Map danh mục theo ID
                     const cateMap = {};
                     rawC.forEach(item => { if (item && item.id !== undefined) cateMap[item.id] = item; });
+
+                    // Map giải thích theo _id hoặc theo index
+                    const expMap = {};
+                    rawE.forEach(item => {
+                        if (item && item._id) expMap[item._id] = item.explanation;
+                    });
 
                     const processed = rawQ.map((q, idx) => {
                         const targetId = idx + 1;
@@ -282,6 +321,14 @@
                             isCorrect: !!opt.isCorrect
                         }));
 
+                        // Lấy giải thích tương ứng dựa vào _id hoặc lấy theo chỉ số mảng
+                        let explanationText = "";
+                        if (q._id && expMap[q._id]) {
+                            explanationText = expMap[q._id];
+                        } else if (rawE[idx] && rawE[idx].explanation) {
+                            explanationText = rawE[idx].explanation;
+                        }
+
                         return {
                             uid: `${course.id}_${idx}`, 
                             courseId: course.id,
@@ -289,6 +336,7 @@
                             id: targetId,
                             text: questionText,
                             options: options,
+                            explanation: explanationText,
                             level: categoryInfo ? categoryInfo.level : "Chưa phân loại",
                             category: categoryInfo ? categoryInfo.category : "Chưa phân loại",
                             topic: categoryInfo ? categoryInfo.topic : "Chưa phân loại"
@@ -332,7 +380,7 @@
             const sortBy = document.getElementById('sort-by').value;
 
             filteredQuestions = allMergedQuestions.filter(q => {
-                const matchKeyword = q.text.toLowerCase().includes(keyword);
+                const matchKeyword = q.text.toLowerCase().includes(keyword) || q.explanation.toLowerCase().includes(keyword);
                 const matchLevel = selectedLevel === "" || q.level === selectedLevel;
                 const matchTopic = selectedTopic === "" || q.topic === selectedTopic;
                 return matchKeyword && matchLevel && matchTopic;
@@ -353,6 +401,7 @@
         function renderQuestions() {
             const container = document.getElementById('questions-container');
             const showAllAnswers = document.getElementById('toggle-answers').checked;
+            const showAllExplanations = document.getElementById('toggle-explanations').checked;
             const groupBy = document.getElementById('group-by').value;
 
             if (filteredQuestions.length === 0) {
@@ -367,7 +416,7 @@
             container.innerHTML = "";
 
             if (groupBy === 'none') {
-                filteredQuestions.forEach(q => container.appendChild(createQuestionCard(q, showAllAnswers)));
+                filteredQuestions.forEach(q => container.appendChild(createQuestionCard(q, showAllAnswers, showAllExplanations)));
             } else {
                 const groups = {};
                 filteredQuestions.forEach(q => {
@@ -384,12 +433,12 @@
                         <span class="badge-count">${qList.length} câu</span>
                     `;
                     container.appendChild(groupHeader);
-                    qList.forEach(q => container.appendChild(createQuestionCard(q, showAllAnswers)));
+                    qList.forEach(q => container.appendChild(createQuestionCard(q, showAllAnswers, showAllExplanations)));
                 }
             }
         }
 
-        function createQuestionCard(q, showAllAnswers) {
+        function createQuestionCard(q, showAllAnswers, showAllExplanations) {
             const card = document.createElement('div');
             card.className = 'question-card';
 
@@ -431,6 +480,15 @@
                 `;
             }).join('');
 
+            // Hiển thị khung giải thích nếu bật toggle hoặc người dùng chọn nút "Hiện giải thích"
+            const shouldShowExp = (showAllExplanations || q.isExpRevealed) && q.explanation;
+            const explanationHTML = shouldShowExp ? `
+                <div class="explanation-box">
+                    <div class="explanation-title">📖 Giải thích chi tiết:</div>
+                    <div>${escapeHTML(q.explanation)}</div>
+                </div>
+            ` : '';
+
             card.innerHTML = `
                 <div class="question-header">
                     <div class="question-title">
@@ -446,13 +504,19 @@
                 <div class="options-list">
                     ${optionsHTML}
                 </div>
-                ${!showAllAnswers ? `
-                    <div class="card-actions">
+                ${explanationHTML}
+                <div class="card-actions">
+                    ${q.explanation && !showAllExplanations ? `
+                        <button class="btn-explanation" onclick="toggleRevealExplanation('${q.uid}')">
+                            📖 ${q.isExpRevealed ? 'Ẩn giải thích' : 'Hiện giải thích'}
+                        </button>
+                    ` : ''}
+                    ${!showAllAnswers ? `
                         <button class="btn-reveal" onclick="toggleRevealCorrect('${q.uid}')">
                             💡 ${q.isRevealed ? 'Ẩn đáp án đúng' : 'Hiện đáp án đúng'}
                         </button>
-                    </div>
-                ` : ''}
+                    ` : ''}
+                </div>
             `;
 
             return card;
@@ -471,6 +535,14 @@
             const target = allMergedQuestions.find(q => q.uid === uid);
             if (target) {
                 target.isRevealed = !target.isRevealed;
+                renderQuestions();
+            }
+        }
+
+        function toggleRevealExplanation(uid) {
+            const target = allMergedQuestions.find(q => q.uid === uid);
+            if (target) {
+                target.isExpRevealed = !target.isExpRevealed;
                 renderQuestions();
             }
         }
