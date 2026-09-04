@@ -258,7 +258,7 @@
 
             for (const course of activeCourses) {
                 try {
-                    const pathFolder = `data/courses/${course.folder}`;
+                    const pathFolder = `./data/courses/${course.folder}`;
                     const [resQ, resC] = await Promise.all([
                         fetch(`${pathFolder}/questions.json`),
                         fetch(`${pathFolder}/cate.json`)
